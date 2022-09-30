@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    </head>
+
+
+    <body>
+        <div id="message">
+        </div>
+        <form>
+            <hr/>
+            <label> 1 ABCから始まる文字列：</label>
+            <input type="text" name="Q1" id="inputQ1" maxlength="100" value="" placeholder="">
+            <br/>
+            <label> 2 ABCから始まりXYZで終わる文字列：</label>
+            <input type="text" name="Q2" id="inputQ2" maxlength="100" value="" placeholder="">
+            <br/>
+            <label> 3 DEFが含まれる文字列：</label>
+            <input type="text" name="Q3" id="inputQ3" maxlength="100" value="" placeholder="">
+            <br/>
+            <label> 4 @の前後に１文字以上存在している文字列：</label>
+            <input type="text" name="Q4" id="inputQ4" maxlength="100" value="" placeholder="">
+            <br/>
+            <label> 5 ０～９までの整数で構成される3ケタの数字：</label>
+            <input type="text" name="Q5" id="inputQ5" maxlength="100" value="" placeholder="">
+            <br/>
+            <label> 6 数字と大文字アルファベットを含まない文字列：</label>
+            <input type="text" name="Q6" id="inputQ6" maxlength="100" value="" placeholder="">
+            <br/>
+            <input type="button" id="btnSubmit" value="送信">
+            <hr/>
+        </form>
+    </body>
+</html>
+
+
+<script>
+    window.onload = function(){
+        const btnSubmit = document.getElementById('btnSubmit');
+        const ABC = document.getElementById('input1');
+        const XYZ = document.getElementById('input2');
+        const DEF = document.getElementById('input3');
+        const Aat = document.getElementById('input4');
+        const Keta3 = document.getElementById('input5');
+        const No = document.getElementById('input6');
+        const  reg1= /^ABC[A-Z]$/;
+        const  reg2= /^ABC.*XYZ$/;
+        const  reg3= /(?=DEF)[A-Za-z]*/;
+        const  reg4= /\^w*@{1}\w$/;
+        const  reg5= /^[0-9]{3}$/;
+        const  reg6= /[A-Z0-9]/;
+        
+        
+        btnSubmit.addEventListener('click', function(event) {
+            let message = [];
+
+
+            if(ABC.value == ""){
+                message.push("1 未回答");
+            }else if(!regQ1.test(Q1.value)){
+                message.push("1 不正");
+            }
+
+
+            if(XYZ.value == ""){
+                message.push("Q 未回答");
+            }else if(!regQ2.test(Q2.value)){
+                message.push("Q 不正");
+            }
+
+
+            if(DEF.value == ""){
+                message.push("Q 未回答");
+            }else if(!regQ3.test(Q3.value)){
+                message.push("Q 不正");
+            }
+
+
+            if(Aat.value == ""){
+                message.push("Q 未回答");
+            }else if(!regQ4.test(Q4.value)){
+                message.push("Q 不正");
+            }
+
+
+            if(Keta3.value == ""){
+                message.push("Q 未回答");
+            }else if(!regQ5.test(Q5.value)){
+                message.push("不正");
+            }
+
+
+            if(No.value == ""){
+                message.push("Q 未回答");
+            }else if(regQ6.test(Q6.value)){
+                message.push("Q 不正");
+            }
+
+
+            if(message.length > 0){
+                alert(message);
+                return;
+            }
+            alert('OK');
+        });
+    }
+</script>

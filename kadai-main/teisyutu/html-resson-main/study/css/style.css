@@ -1,0 +1,217 @@
+/* ページ全体 */
+
+body {
+    background-color: #ffffff;
+}
+
+
+/** ヘッダー */
+
+.header{
+    background-color: #0f1923;
+}
+
+.header_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    
+}
+
+.header_logo {
+    
+}
+
+.logo_image {
+    width: 50px;
+}
+
+.header_menu {  
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.header_menu_item{
+}
+
+/* リンク文字 */
+
+
+
+.header_menu_item a {
+    color: #00d084;
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+
+
+/* リンク文字ホバー時 */
+
+a:hover {}
+
+.contents_item h1 {}
+
+.about {
+    background-image: url("../img/about.jpg");
+}
+
+.about_container_ue_item{
+    color: #00d084;
+    font-size: 50px;
+    padding-top: 100px;
+    padding-left: 50px;
+} 
+
+.about_container_ue_item2{
+    color: #ffffff;
+    font-size: 30px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 500px;
+    padding-bottom: 20px;
+}
+
+.member_about{
+    font-size: 50px;
+    color: #00d084;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+
+.member_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.memberName{
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.member_menu{
+    text-align: center;
+    width: 18vw;
+    background-color: #0f1923;
+    margin-bottom: 10px;
+}
+
+.member_menu img{
+    width: 80%;
+    margin-top: 10px;
+
+}
+
+.game{
+    background-color: #0f1923;
+}
+
+.game_title{
+    font-size: 50px;
+    color: #00d084;
+    padding-top: 30px;
+    margin-left: 50px;
+}
+
+.game_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+
+}
+.game_nemu{
+    background-color: antiquewhite;
+    width: 15vw;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.game_nemu img{
+    width: 80%;
+    margin-top: 10px;
+}
+
+.gameName{
+    font-size: 25px;
+}
+
+.contact{
+    background-color: antiquewhite;
+
+}
+
+.contact_title{
+    font-size: 50px;
+    color: #00d084;
+    margin-left: 50px;
+    padding-top: 30px;
+}
+
+.contact_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    height: 50vh;
+}
+
+.input_name{
+    width: 10%;
+}
+
+.input_gender{
+    width: 5%;
+}
+
+.input_mail{
+    width: 25%;
+}
+
+.input_contents{
+    width: 10%;
+}
+
+.input_item{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer{
+    background-color: #0f1923;
+}
+
+.footer_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer_item{
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.logo_image2{
+    width: 50px;
+    height: 50px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
